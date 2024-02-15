@@ -28,7 +28,7 @@
         en JavaScript ya que me gustaria aprender a usar reactJS y nodeJS
       </p>
     </div>
-    <div id="preguntasRespuestas" class="container">
+    <div id="preguntas" class="container">
       <h2>Preguntas</h2>
       <ol>
         <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
@@ -70,7 +70,7 @@
         <li>¿Cuáles son los principales controles de una forma HTML5?</li>
       </ol>
     </div>
-    <div class="container" id="respuestas">
+    <div id="respuestas" class="container">
       <h2>Respuestas</h2>
       <ol>
         <li>
@@ -127,6 +127,7 @@
     </div>
 
     <div id="inputs-forms" class="container">
+      <h2>Forma con un input</h2>
       <form id="form-1">
         <label for="colorInput">Escoge el color del fondo:</label>
         <input type="color" id="colorInput" name="colorInput" />
@@ -134,14 +135,54 @@
       </form>
     </div>
 
-    <script>
-      document
-        .getElementById("form-1")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          let color = document.getElementById("colorInput").value;
-          document.body.style.backgroundColor = color;
-        });
-    </script>
+    <header class="container">Laboratorio 2 - preguntas</header>
+    <div class="container" id="respuestas-lab-02">
+      <h2>Preguntas Lab 02</h2>
+      <ol>
+        <li>
+          Como ingeniero de software, ¿cuál es tu recomendación sobre el uso de
+          <code>!important</code> en un CSS?
+        </li>
+        <li>
+          Si se pone una imagen de fondo en una página HTML, ¿por qué debe
+          escogerse con cuidado?
+        </li>
+        <li>
+          Como ingeniero de software, ¿cuál es tu recomendación al elegir las
+          unidades de una propiedad de estilo entre <code>%</code>,
+          <code>px</code> y <code>pt</code>?
+        </li>
+        <li>
+          ¿Por qué el uso de una versión minimizada del CSS mejora el
+          rendimiento del sitio?
+        </li>
+      </ol>
+    </div>
+    <div class="container" id="respuestas-lab-02">
+      <h2>Respuestas Lab 02</h2>
+      <ol>
+        <li>
+          Puede llegar a ser muy importante y util en situaciones especificas,
+          pero si usa excesivamente puede hacer que el codigo sea dificil de
+          mantener
+        </li>
+        <li>
+          Es importante tener cuidado ya que hay que revisar varios factores
+          como la claridad, contraste, el tamanio del archivo y la
+          compatibilidad del dispositivo
+        </li>
+        <li>
+          Para usar % hay que usar dimensiones relativas y si se quiere hacer
+          una pagina "responsive", al usar px se tiene mas precision sobre el
+          tamanio que se usa, y los pt se suelen usar en unidades de impresion
+        </li>
+        <li>
+          Usar una version minimizada de css ayuda al tener un menor tamanio de
+          archivo y gracias a eso hace que los datos sean menores por lo que son
+          mas rapidos de transferir
+        </li>
+      </ol>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
