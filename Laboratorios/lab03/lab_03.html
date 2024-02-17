@@ -1,12 +1,68 @@
 <!DOCTYPE html>
+<!-- En este html voy a usar los componentes de bootstrap uniendo el lab 4 y el 5 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Laboratorio 4 y 5</title>
   </head>
   <body>
-    <h1>Laboratorio 3 - JavaScript</h1>
-    <script src="lab_03.js"></script>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://github.com/DiegoRAP2003/TC2005B"
+            >TC2005B</a
+          >
+          <h1>Laboratorio 3</h1>
+          <a style="color: #000">JavaScript</a>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <h2>Tengo que hacer servicio de mi carro o lavarlo?</h2>
+      <h3>Descubrelo!</h3>
+
+      <div class="pregunta">Que quieres saber?</div>
+      <select
+        class="form-select"
+        id="lavado-servicio"
+        aria-label="Default select example"
+      >
+        <option selected value="error">Elige un opcion</option>
+        <option value="mantenimiento">Si necesito hacerle mantenimiento</option>
+        <option value="lavado">Si necesito lavarlo</option>
+      </select>
+
+      <div class="pregunta">Elige la marca de tu carro</div>
+      <select
+        class="form-select"
+        id="marcas"
+        aria-label="Default select example"
+      >
+        <option selected value="error">Elige un opcion</option>
+        <option value="ford">Ford</option>
+        <option value="mazda">Mazda</option>
+        <option value="mercedes">Meche</option>
+        <option value="bmw">BMW</option>
+      </select>
+      <div class="pregunta">Indica la fecha de tu ultimo servicio</div>
+      <div id="fecha"><input type="date" id="fecha" /></div>
+      <div class="boton">
+        <button class="button" id="button-1">Button</button>
+      </div>
+    </div>
+    <script src="lab_04.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
