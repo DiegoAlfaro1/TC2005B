@@ -128,12 +128,25 @@
 
 //checar cuando le toca mantenimiento o lavado
 
-let objFinal = {};
+let objFinal = {
+  getMensaje: function () {
+    if (this.seleccion === "lavado" && this.diasSin > 15) {
+      return "Ya te toca lavarlo";
+    } else if (this.seleccion === "mantenimiento" && objFinal.diasSin > 90) {
+      return "Ya tienes que hacerle mantenimiento a tu carro";
+    } else {
+      return this.seleccion === "lavado"
+        ? "Aun no hay que lavar el carro"
+        : "Aun no tienes que hacerle servicio a tu carro";
+    }
+  },
+};
 
 const eleccion_Servicio_Lavado = document.querySelector("#lavado-servicio");
 const eleccion_marca = document.querySelector("#marcas");
 const btnSubmit = document.querySelector("#button-1");
 const fecha = document.querySelector("#fecha");
+const modalBody = document.querySelector("#Modal-01 .modal-body");
 
 eleccion_Servicio_Lavado.addEventListener("change", function () {
   let opcionSeleccionada = eleccion_Servicio_Lavado.value;
@@ -146,7 +159,7 @@ eleccion_marca.addEventListener("change", function () {
 });
 
 fecha.addEventListener("change", function () {
-  let fechaSeleccionada = new Date(document.querySelector("#fecha").value);
+  let fechaSeleccionada = new Date(document.querySelector(".fecha").value);
   let fechaActual = new Date();
   let diffEnMilisegundos = fechaActual - fechaSeleccionada;
   let dias = Math.floor(diffEnMilisegundos / (1000 * 60 * 60 * 24));
@@ -154,7 +167,6 @@ fecha.addEventListener("change", function () {
 });
 
 btnSubmit.addEventListener("click", function () {
-  console.log(objFinal);
+  let mensaje = objFinal.getMensaje();
+  modalBody.textContent = mensaje;
 });
-
-//una vez que se cheque si es lavado o mantenimiento usando el boton, se tiene que abrir un modal para indicar como esta le pedo si si o no

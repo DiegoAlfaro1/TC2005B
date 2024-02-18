@@ -28,11 +28,25 @@ h3 {
   background-color: aliceblue;
 }
 
+.accordion-button {
+  font-weight: 700;
+}
+
+#labQuestions {
+  margin-bottom: 60px;
+}
+
 .pregunta {
   display: flex;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.modal-body {
+  color: #000;
+  display: flex;
+  justify-content: center;
 }
 
 #fecha {
@@ -45,6 +59,7 @@ h3 {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .button {
