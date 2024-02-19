@@ -20,7 +20,7 @@
   justify-content: space-between;
 }
 
-.counter-buy a {
+.counter-buy button {
   width: auto;
   height: auto;
 }
@@ -30,4 +30,8 @@
   outline: none;
   border: 0.5px solid #ccc;
   border-radius: 9px;
+}
+
+.cart-total svg {
+  margin-left: 15px;
 }
