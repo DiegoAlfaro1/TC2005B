@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container" id="header">Laboratorio 1 - A01709971</header>
+
+    <div id="informacionPersonal" class="container">
+      <h2>Informacion Personal</h2>
+      <ul>
+        <li><strong>Diego Alfaro</strong></li>
+        <li>Matricula: A01709971</li>
+        <li>Correo electronico: a01709971@tec.mx</li>
+        <li>
+          Editor usado: <a href="https://code.visualstudio.com/">VScode</a>
+        </li>
+      </ul>
+      <h2>Aficiones</h2>
+      <p style="margin-top: -10px">
+        Me gusta mucho el tennis, jugue torneos en Honduras cuando era mas
+        pequenio y gane varios, ahora estoy empezando a jugar padel ya que es
+        mas dinamico pero tiene la misma escencia, tambien me gustan los
+        viedeojuegos e ir al gimnasio. Actualmente estoy aprendiendo a programar
+        en JavaScript ya que me gustaria aprender a usar reactJS y nodeJS
+      </p>
+    </div>
+    <div id="preguntas" class="container">
+      <h2>Preguntas</h2>
+      <ol>
+        <li>¿Cuál es la diferencia entre Internet y la World Wide Web?</li>
+        <li>¿Cuáles son las partes de un URL?</li>
+        <li>
+          ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT,
+          PATCH, DELETE?
+        </li>
+        <li>
+          ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por
+          ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por
+          qué?
+        </li>
+        <li>
+          ¿Qué método HTTP se utiliza cuando a través de un navegador web se
+          accede a una página a través de un URL?
+        </li>
+        <li>
+          Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué
+          significa esto? ¿Ocurrió algún error?
+        </li>
+        <li>
+          ¿Es responsabilidad del desarrollador corregir un sitio web si un
+          usuario reporta que intentó acceder al sitio y se encontró con un
+          error 404? ¿Por qué?
+        </li>
+        <li>
+          ¿Es responsabilidad del desarrollador corregir un sitio web si un
+          usuario reporta que intentó acceder al sitio y se encontró con un
+          error 500? ¿Por qué?
+        </li>
+        <li>
+          ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado
+          (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén
+          desaprobados.
+        </li>
+        <li>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</li>
+        <li>¿Qué componentes de estructura y estilo tiene una tabla?</li>
+        <li>¿Cuáles son los principales controles de una forma HTML5?</li>
+      </ol>
+    </div>
+    <div id="respuestas" class="container">
+      <h2>Respuestas</h2>
+      <ol>
+        <li>
+          Internet es una red de computadoras alrededor del mundo que se
+          conectan entre si. WWW es una coleccion de paginas sobre una red de
+          computadoras
+        </li>
+        <li>
+          Los url estan hechos por 9 partes, el equema, subdominio, dominio de
+          segundo nivel, dominio de nivel superior, subdirectorio, puerto, ruta,
+          consulta, parametros, fragmento
+        </li>
+        <li>
+          Son un conjunto de metodos de peticion que indican la accion que desea
+          realizar para un recurso determinado
+        </li>
+        <li>
+          Para enviar formularios con informacion sensible se debe usar el
+          metodo HTTP POST ya que la informacion enviada a traves del metodo
+          post se incluye en la solicitud HTTP en lugar de la URL
+        </li>
+        <li>Generalmente se utiliza el metodo GET</li>
+        <li>Significa que la solicitud fue exitosa</li>
+        <li>
+          Si, ya que el error 404 se da cuando el servidor no encuentra la
+          pagina solicitada
+        </li>
+        <li>
+          Si, el error 500 indica un error interno en el servidor, lo que
+          significa algo salio mal al procesar la solicitud
+        </li>
+        <li>
+          Signica que probablemnte puede ser eliminado en futuras versiones y ya
+          no se considera practica recomendada, aglunos ejemplos son: 'align',
+          'bgcolor', 'border'
+        </li>
+        <li>
+          html5 incluye nuevos elementos y atributos como header nav, article,
+          tambien se incluyo las etiquetas audio y video para la reproduccion de
+          contenido multimedia
+        </li>
+        <li>
+          Las tablas tienen varios elemento: la etiqueta principal table, la
+          etiqueta que define una fila 'tr', una que representa una celda en una
+          fila 'td', una celda de encabezadp 'th', tambien tienen componentes
+          que se utilizan para componentes de estilo
+        </li>
+        <li>
+          Existen varios como 'input', elementos 'textarea' para introducir
+          texto en varias lineas, 'select' para crear menus desplegables, entre
+          otros
+        </li>
+      </ol>
+    </div>
+
+    <div id="inputs-forms" class="container">
+      <h2>Forma con un input</h2>
+      <form id="form-1">
+        <label for="colorInput">Escoge el color del fondo:</label>
+        <input type="color" id="colorInput" name="colorInput" />
+        <button type="submit">Cambia el color</button>
+      </form>
+    </div>
+
+    <header class="container" id="header">Laboratorio 2 - preguntas</header>
+    <div class="container" id="respuestas-lab-03">
+      <h2>Preguntas Lab 02</h2>
+      <ol>
+        <li>
+          Como ingeniero de software, ¿cuál es tu recomendación sobre el uso de
+          <code>!important</code> en un CSS?
+        </li>
+        <li>
+          Si se pone una imagen de fondo en una página HTML, ¿por qué debe
+          escogerse con cuidado?
+        </li>
+        <li>
+          Como ingeniero de software, ¿cuál es tu recomendación al elegir las
+          unidades de una propiedad de estilo entre <code>%</code>,
+          <code>px</code> y <code>pt</code>?
+        </li>
+        <li>
+          ¿Por qué el uso de una versión minimizada del CSS mejora el
+          rendimiento del sitio?
+        </li>
+      </ol>
+    </div>
+    <div class="container" id="respuestas-lab-03">
+      <h2>Respuestas Lab 02</h2>
+      <ol>
+        <li>
+          Puede llegar a ser muy importante y util en situaciones especificas,
+          pero si usa excesivamente puede hacer que el codigo sea dificil de
+          mantener
+        </li>
+        <li>
+          Es importante tener cuidado ya que hay que revisar varios factores
+          como la claridad, contraste, el tamanio del archivo y la
+          compatibilidad del dispositivo
+        </li>
+        <li>
+          Para usar % hay que usar dimensiones relativas y si se quiere hacer
+          una pagina "responsive", al usar px se tiene mas precision sobre el
+          tamanio que se usa, y los pt se suelen usar en unidades de impresion
+        </li>
+        <li>
+          Usar una version minimizada de css ayuda al tener un menor tamanio de
+          archivo y gracias a eso hace que los datos sean menores por lo que son
+          mas rapidos de transferir
+        </li>
+      </ol>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
