@@ -7,21 +7,21 @@ const filesystem = require("fs");
 //en el archivo indicado en el primer parámetro
 filesystem.writeFileSync("hola.txt", "Hola desde node");
 
-const te_hackie = () => {
-  console.log("jojo te hackié");
-};
+// const te_hackie = () => {
+//   console.log("jojo te hackié");
+// };
 
-//Código asíncrono: te_hackie se ejecuta en 7 segundos
-setTimeout(te_hackie, 7000);
+// //Código asíncrono: te_hackie se ejecuta en 7 segundos
+// setTimeout(te_hackie, 7000);
 
-const arreglo = [5000, 60, 90, 100, 10, 20, 10000, 0, 120, 2000, 340, 1000, 50];
+// const arreglo = [5000, 60, 90, 100, 10, 20, 10000, 0, 120, 2000, 340, 1000, 50];
 
-//Código asíncrono el arreglon se imprime en orden
-for (let item of arreglo) {
-  setTimeout(() => {
-    console.log(item);
-  }, item);
-}
+// //Código asíncrono el arreglon se imprime en orden
+// for (let item of arreglo) {
+//   setTimeout(() => {
+//     console.log(item);
+//   }, item);
+// }
 
 console.log("Esto se imprime antes de los números");
 
@@ -29,9 +29,10 @@ console.log("Esto se imprime antes de los números");
 const http = require("http");
 
 const server = http.createServer((request, response) => {
-  console.log(request.url);
-  response.setHeader("Content-Type", "text/html");
-  response.write(`
+  if (request.url == "/") {
+    console.log(request.url);
+    response.setHeader("Content-Type", "text/html");
+    response.write(`
     <!DOCTYPE html>
     <html>
         <head>
@@ -304,7 +305,94 @@ const server = http.createServer((request, response) => {
         </body>
     </html>
     `);
-  response.end();
+    response.end();
+  } else if (request.url == "/construir") {
+  } else {
+    response.statusCode = 404;
+    response.setHeader("Content-Type", "text/html");
+    response.write(`
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Minecraft</title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        </head>
+        <body>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                  <a class="navbar-item" href="https://bulma.io">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT27Ahugh_giimXgC5jzZNAIdsZGxqjA-bvxw-4gRbBfF8evxX2rYwG4eI_fRiurOTiZ_c&usqp=CAU" width="112" height="28">
+                  </a>
+              
+                  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
+                </div>
+              
+                <div id="navbarBasicExample" class="navbar-menu">
+                  <div class="navbar-start">
+                    <a class="navbar-item">
+                      Home
+                    </a>
+              
+                    <a class="navbar-item">
+                      Documentation
+                    </a>
+              
+                    <div class="navbar-item has-dropdown is-hoverable">
+                      <a class="navbar-link">
+                        More
+                      </a>
+              
+                      <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                          About
+                        </a>
+                        <a class="navbar-item">
+                          Jobs
+                        </a>
+                        <a class="navbar-item">
+                          Contact
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                          Report an issue
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <div class="navbar-end">
+                    <div class="navbar-item">
+                      <div class="buttons">
+                        <a class="button is-primary">
+                          <strong>Sign up</strong>
+                        </a>
+                        <a class="button is-light">
+                          Log in
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            <section class="section">
+                <div class="container">
+                    <h1 class="title">UPS! La pagina no existe</h1>
+    
+
+                    </div>
+    
+
+        </body>
+    </html>
+    `);
+    response.end();
+  }
 });
 
 server.listen(3000);
