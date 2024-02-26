@@ -307,6 +307,7 @@ const server = http.createServer((request, response) => {
     `);
     response.end();
   } else if (request.url == "/construir") {
+    response.write();
   } else {
     response.statusCode = 404;
     response.setHeader("Content-Type", "text/html");
