@@ -1,11 +1,11 @@
 console.log("hola mundo desde node");
 
 //fs es el módulo para manipular el sistema de archivos
-const filesystem = require("fs");
+// const filesystem = require("fs");
 
-//Escribe el string del segundo parámetro
-//en el archivo indicado en el primer parámetro
-filesystem.writeFileSync("hola.txt", "Hola desde node");
+// //Escribe el string del segundo parámetro
+// //en el archivo indicado en el primer parámetro
+// filesystem.writeFileSync("hola.txt", "Hola desde node");
 
 const te_hackie = () => {
   console.log("jojo te hackié");
@@ -27,7 +27,7 @@ console.log("Esto se imprime antes de los números");
 
 const header = `
     <!DOCTYPE html>
-    <html>
+    <html lang ="es">
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
