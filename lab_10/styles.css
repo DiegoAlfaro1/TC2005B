@@ -1,0 +1,101 @@
+/* laboratorio 6 */
+.card {
+  margin: 20px;
+  width: 20rem;
+}
+
+.card img {
+  width: 18rem;
+  height: 18rem;
+}
+
+#item-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.counter-buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.counter-buy button {
+  width: auto;
+  height: auto;
+  background-color: #f8f9fa;
+  color: black;
+  border-color: #f8f9fa;
+}
+
+.counter-buy input {
+  width: 50px;
+  outline: none;
+  border: 0.1px solid #ccc;
+  border-radius: 9px;
+  background-color: #f8f9fa;
+}
+
+.cart-total svg {
+  margin-left: 15px;
+}
+
+.total p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.iva-product {
+  font-size: 10px;
+  margin: -10px;
+}
+
+#iva {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* laboratorio 10 */
+#login-box {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+
+  background-color: #f8f9fa;
+  width: 500px;
+  height: 600px;
+  margin-top: 5%;
+  border-radius: 30px;
+}
+
+.food-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #e8ecf1;
+  border-radius: 10px;
+  width: 85%;
+  height: 10%;
+  margin-top: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.food-option a {
+  margin-left: 15px;
+  margin-top: -4px;
+}
+
+.food-option:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+  font-weight: 430;
+  margin-top: 8px;
+  margin-left: 20px;
+}
