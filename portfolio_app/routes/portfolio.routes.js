@@ -4,3 +4,5 @@ const router = express.Router();
 router.get("/", (request, response, next) => {
   response.render("homePage");
 });
+
+module.exports = router;

@@ -1,7 +1,7 @@
 {
   "name": "minecraft",
   "version": "1.0.0",
-  "description": "Proyecto laboratorio 11 TC2005B",
+  "description": "Proyecto compañero del curso TC2005B grupo 2",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -9,17 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DiegoRAP2003/TC2005B.git"
+    "url": "git+https://bitbucket.org/ejuarez/minecraft.git"
   },
   "keywords": [
     "tc2005b"
   ],
-  "author": "Diego Alfaro",
+  "author": "Eduardo Juarez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DiegoRAP2003/TC2005B/issues"
+    "url": "https://bitbucket.org/ejuarez/minecraft/issues"
   },
-  "homepage": "https://github.com/DiegoRAP2003/TC2005B#readme",
+  "homepage": "https://bitbucket.org/ejuarez/minecraft#readme",
   "devDependencies": {
     "nodemon": "^3.1.0"
   },
