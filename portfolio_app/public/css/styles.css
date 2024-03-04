@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  background: #000000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 0 50px;
+}
+
+.navbar h2 {
+  color: #f57d1f;
+  font-weight: 600;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 25px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a {
+  color: #ebf400;
+}
+
+.hire-btn,
+.btn {
+  padding: 10px;
+  border: none;
+  background-color: #f57d1f;
+  color: #000000;
+  transition: color 0.3s ease;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hire-btn:hover,
+.btn:hover {
+  box-shadow: 0 0 30px rgba(235, 244, 0, 0.5);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 150px;
+}
+
+
+
+.greeting {
+  color: #ebf400;
+}
+
+.main .title {
+  font-weight: 600;
+  font-size: 45px;
+  width: 600px;
+  margin-top: 32px;
+}
+
+.personal-foto {
+  background: #fff;
+  width: 600px;
+  height: 50vh;
+  margin-left: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+
+.contact-input {
+  display: flex;
+  flex-direction: column;
+}
+.contact-input button {
+  margin-top: 40px;
+  width: 100px;
+}
+
+.contact-input input {
+  margin-top: 30px;
+  color: #000000;
+  border: none;
+  outline: none;
+}
+
+.contact-field {
+  padding: 250px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-btn{
+  width: 40px;
+  height: 10px;
+}
