@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
+const controladores = require('../controllers/laboratorio13.controller')
 
-router.get("/", (request, response, next) => {
-  response.render("homePage");
-});
+router.get("/",controladores.get_homePage );
 
 router.get("/AboutMe", (request,response,next) =>{
   response.render("aboutMe")
