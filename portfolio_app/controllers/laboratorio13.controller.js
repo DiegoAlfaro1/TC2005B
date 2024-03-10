@@ -1,4 +1,7 @@
-const fs = require("fs")
+const fs = require("fs");
+const { request } = require("http");
+
+const Contacto = require('../models/contactos.model')
 
 exports.get_homePage = (request, response, next) => {
   response.render("homePage");
@@ -19,11 +22,13 @@ exports.get_contactMe = (request,response,next) =>{
 
 exports.post_contactme = (request,response,next) =>{
   console.log(request.body);
-  const dataToWrite = JSON.stringify(request.body,null,2);
-  fs.appendFile("PostDatos.txt", dataToWrite + '\n', (err) => {
-    if(err){
-      console.log("Error")
-    }
-  })
-  response.redirect("/")
+  const contacto = new Contacto(request.body.name,request.body.email)
+  contacto.save();
+  response.redirect("/contactadoPor");
+}
+
+exports.get_contactadoPor = (request,response,next) =>{
+  response.render("contactadoPor",{
+    contacto:Contacto.fetchAll(),
+  });
 }
