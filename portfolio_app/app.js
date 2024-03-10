@@ -11,9 +11,11 @@ const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const routasPortfolio = require("./routes/portfolio.routes"); //cambiar por mi routes
+const routasPortfolio = require("./routes/portfolio.routes");
+const routasContactMe = require("./routes/contactMe.routes")
 
 app.use("/", routasPortfolio);
+// app.use("/ContactMe",routasContactMe)
 
 app.use((request, response, next) => {
   response.status(404);

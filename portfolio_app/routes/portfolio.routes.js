@@ -4,15 +4,14 @@ const controladores = require('../controllers/laboratorio13.controller')
 
 router.get("/",controladores.get_homePage );
 
-router.get("/AboutMe", (request,response,next) =>{
-  response.render("aboutMe")
-})
+router.get("/AboutMe",controladores.get_aboutMe )
 
-router.get("/HireMe", (request,response,next) =>{
-  response.render("hireMe")
-})
+router.get("/HireMe", controladores.get_hireMe)
 
-router.get("/ConactMe",(request,response,next) =>{
-  response.render("contactMe")})
+router.get("/ContactMe",controladores.get_contactMe)
+router.post('/ContactMe',controladores.post_contactme);
+
+
+
 
 module.exports = router;

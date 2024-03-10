@@ -123,6 +123,7 @@ body {
   justify-content: center;
   display: flex;
   flex-direction: row;
+  padding-top: 0px;
 }
 
 .contact-btn{

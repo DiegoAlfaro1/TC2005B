@@ -11,10 +11,18 @@
         <p>442-136-0456</p>
     </div>
     <div class="contact-input">
-        <label for="contactLabel-1">
-            <h2>E-mail:</h2>
-        </label><input type="text" placeholder="Insert your email" />
-        <button class="send-info btn">Send</button>
+        <form action="/ContactMe" method="post">
+            <label for="name">
+                <h2>Name:</h2>
+            </label>
+            <input type="text" placeholder="Insert your name" name="name" />
+            <label for="email">
+                <h2>E-mail:</h2>
+            </label>
+            <input type="text" placeholder="Insert your email" name="email" />
+            <button type="submit" class="send-info btn">Send</button>
+        </form>
+
     </div>
 </div>
 </div>
