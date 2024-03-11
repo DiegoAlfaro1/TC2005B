@@ -21,7 +21,6 @@ exports.get_contactMe = (request,response,next) =>{
 }
 
 exports.post_contactme = (request,response,next) =>{
-  console.log(request.body);
   const contacto = new Contacto(request.body.name,request.body.email)
   contacto.save();
   response.redirect("/contactadoPor");
@@ -29,6 +28,6 @@ exports.post_contactme = (request,response,next) =>{
 
 exports.get_contactadoPor = (request,response,next) =>{
   response.render("contactadoPor",{
-    contacto:Contacto.fetchAll(),
+    contacto: Contacto.fetchAll(),
   });
 }

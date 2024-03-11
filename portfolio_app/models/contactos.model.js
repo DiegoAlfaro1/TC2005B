@@ -8,8 +8,8 @@ module.exports = class Contacto{
 
     save(){
         contactos.push({
-            name: this.name_contacto,
-            email: this.email_contacto,
+            name: this.name,
+            email: this.email,
         })
     }
 
