@@ -24,7 +24,7 @@ exports.post_contactme = (request,response,next) =>{
   const contacto = new Contacto(request.body.name,request.body.email)
   contacto.save();
 
-  response.setheader('Set-Cookie', 'nombre_cookie=' + request.body.name + '; HttpOnly');
+  response.setHeader('Set-Cookie', 'nombre_cookie=' + request.body.name + '; HttpOnly');
   response.redirect("/contactadoPor");
 }
 
