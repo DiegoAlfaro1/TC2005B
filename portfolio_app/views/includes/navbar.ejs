@@ -19,6 +19,16 @@
         <li><a href="/aboutMe">About</a></li>
       </ul>
       <a href="/hireMe" class="hire-btn btn">Hire Me</a>
+      <% if(username == ''){ %>
+      <a class="btn">Registrarse</a>
+      <a href="/users/login" class="btn">Login</a>
+
+      <%} else{ %>
+        <span>
+          Hola <strong><%= username %> | </strong>
+        </span>
+        <a href="/users/logout" class="btn">Salir</a>
+      <% } %>
     </div>
     <div class="main">
   
