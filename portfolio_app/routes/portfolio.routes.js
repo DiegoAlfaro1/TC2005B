@@ -8,7 +8,8 @@ router.get("/AboutMe",controladores.get_aboutMe )
 
 router.get("/HireMe", controladores.get_hireMe)
 
-router.get("/ContactMe",controladores.get_contactMe)
+//////////////
+router.get('/ContactMe',controladores.get_contactMe)
 router.post('/ContactMe',controladores.post_contactme);
 
 router.get("/contactadoPor", controladores.get_contactadoPor)
