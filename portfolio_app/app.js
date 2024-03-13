@@ -4,6 +4,14 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "views");
 
+const session = require('express-session');
+
+app.use(session({
+  secret: 'mi string',
+  resave: false,
+  saveUninitialized: false,
+}))
+
 const path = require("path");
 app.use(express.static(path.join(__dirname, "/public")));
 
