@@ -16,14 +16,19 @@
         <div class="login-title">
             <h4>Log-In</h4>
         </div>
-        <div class="credential-input">
-            <label for="credential-input">Nombre de usuario:</label>
-            <input type="email" name="email-input" id="username" placeholder="Ingresa tu correo electronico">
-        </div>
-        <div class="credential-input">
-            <label for="credential-input">Contrasena:</label>
-            <input type="password" name="password-input" id="password" placeholder="Ingresa tu contrasena">
-        </div>
+        <form action="/users/login" method="post">
+            <div class="credential-input">
+                <label for="name">Nombre de usuario:</label>
+                <input type="email" name="name" id="username" placeholder="Ingresa tu correo electronico">
+            </div>
+            <div class="credential-input">
+                <label for="password">Contrasena:</label>
+                <input type="password" name="password" id="password" placeholder="Ingresa tu contrasena">
+            </div>
+            <button type="submit">Ingresar</button>
+        </form> 
+
+
 
         <div class="google-login">
             <p>Log-In con google:</p>
