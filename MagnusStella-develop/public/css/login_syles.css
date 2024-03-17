@@ -10,17 +10,17 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.login-box{
+.login-box, .box{
     display: flex;
     flex-direction: column;
     width: 370px;
-    height: 450px;
+    height: 500px;
     background-color: #EEEEEE;
     border-radius: 20px;
     box-shadow: 0 0 10px #525252 ;
 }
 
-.login-title{
+.login-title, .title{
     display: flex;
     flex-direction: row;
     height: 100px;
@@ -69,4 +69,35 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.ingresar-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn{
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 4px #525252;
+}
+/* Signup */
+
+.signup-box{
+    width: 65%;
+}
+
+.alert{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: red;
 }
