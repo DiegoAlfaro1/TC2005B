@@ -1,6 +1,9 @@
 const Usuarios = require("../models/usuarios.model");
+const bycrypt = require('bcryptjs');
 
 exports.get_login = (request, response, next) => {
+    const error = request.session.error || '';
+    request.session.error = '';
     response.render("login")
 };
 

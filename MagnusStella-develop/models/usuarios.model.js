@@ -1,4 +1,5 @@
 const db = require('../util/database');
+const bcrypt = require('bcryptjs');
 
 module.exports = class Usuarios {
     constructor(name, email, password, idUser, IdRol){
@@ -18,13 +19,18 @@ module.exports = class Usuarios {
             Correo: this.email,
         }
 
-        const values = Object.values(userData);
+        return bcrypt.hash(userData.Contrasena, 12).then((hashedPassword) => {
+            const values = Object.values(userData);
+
+            return db.execute('INSERT INTO usuario (idUsuario,IdRol,Nombre,Constraseña,Correo) VALUES (?,?,?,?,?)',values);
+        }).then(result => {
+            console.log('Usuario Guardado: ', result);
+        }).catch(err => {
+            console.log('Error guardando usuario: ',err);
+            throw err;
+        });
+
         //cambiar la columna constrasena a contrasena cuando se tenga la ultima version de la base de datos 
-        db.execute('INSERT INTO usuario (idUsuario,IdRol,Nombre,Constraseña,Correo) VALUES (?,?,?,?,?)',values).then(result => {
-                console.log('Usuario Guardado: ',result);
-            }).catch(err => {
-                console.log('Error guardando usuario: ',err);
-            })
     }   
 
     static fetchAll(){
