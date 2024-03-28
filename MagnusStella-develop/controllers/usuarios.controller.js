@@ -10,12 +10,10 @@ exports.get_login = (request, response, next) => {
 exports.post_login = (request, response, next) => {
     const {email, password} = request.body;
     console.log(request.body);
-    if(!email || !password || !email){
+    if(!email || !password){
         return response.render("login", {error: "Llena todos los campos"})
     }
-    // const usuarios = new Usuarios(request.body.name, request.body.password);
-    // usuarios.save();
-    request.session.username = request.body.username;
+    request.session.username = request.body.name;
     response.redirect('/');
 };
 
@@ -31,7 +29,7 @@ exports.get_signup =(request, response, next) => {
     response.render("signup")
 };
 
-let latestID = 1; //en este caso empiezo en 1 ya que ya se creo el primer usuario
+let latestID = 4; //en este caso empiezo en 1 ya que ya se creo el primer usuario
 
 exports.post_signup = (request,response,next) => {
     const {name, email, password} = request.body;
@@ -56,3 +54,4 @@ const generateUserID = () => {
     const UserID = 'U' + String(latestID).padStart(6,'0');
     return UserID;
 }
+

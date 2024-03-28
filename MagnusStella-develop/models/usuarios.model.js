@@ -19,10 +19,11 @@ module.exports = class Usuarios {
             Correo: this.email,
         }
 
-        return bcrypt.hash(userData.Contrasena, 12).then((hashedPassword) => {
-            const values = Object.values(userData);
-
-            return db.execute('INSERT INTO usuario (idUsuario,IdRol,Nombre,Constraseña,Correo) VALUES (?,?,?,?,?)',values);
+        return bcrypt.hash(userData.Contrasena, 12)
+            .then((hashedPassword) => {
+                userData.Contrasena = hashedPassword;
+                const values = Object.values(userData);
+                return db.execute('INSERT INTO usuario (idUsuario,IdRol,Nombre,Constraseña,Correo) VALUES (?,?,?,?,?)',values);
         }).then(result => {
             console.log('Usuario Guardado: ', result);
         }).catch(err => {
@@ -32,6 +33,7 @@ module.exports = class Usuarios {
 
         //cambiar la columna constrasena a contrasena cuando se tenga la ultima version de la base de datos 
     }   
+
 
     static fetchAll(){
         db.execute('SELECT * FROM usuarios')
