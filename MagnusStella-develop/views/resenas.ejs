@@ -1,6 +1,9 @@
 <%- include('includes/navigation.ejs') %>
 
-<div id="search-autocomplete" class="form-outline" data-mdb-input-init>
+<!-- Esto es parte del proyecto, lo comente para poder hacer el lab 22 -->
+
+
+<!-- <div id="search-autocomplete" class="form-outline" data-mdb-input-init>
     <input type="search" id="form1" class="form-control" placeholder="Busca tu producto"/>
     <button type="button" class="btn btn-primary" data-mdb-ripple-init>
         <i class="fas fa-search"></i>
@@ -30,7 +33,16 @@
             <div class="clearfix"></div>
         <% } %>
     <% }); %>
-</div>
+</div> -->
+
+<!-- Laboratorio 22 -->
+
+<h2>Agregar imagen</h2>
+<form method="post" enctype="multipart/form-data">
+    <label for="imagen">Imagen</label> <br>
+    <input type="file" name="imagen" id="imagen"><br>
+    <input type="submit">
+</form>
 
 
 

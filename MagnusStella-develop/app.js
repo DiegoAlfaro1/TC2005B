@@ -20,6 +20,19 @@ const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended:false}));
 
+const multer = require('multer')
+
+const fileStorage = multer.diskStorage({
+    destination: (reques,file,callback) => {
+        callback(null,'public/uploads');
+    },
+    filename: (request,file,callback) => {
+        callback(null, new Date().toISOString() + '-' + file.originalname);
+    },
+});
+
+app.use(multer({storage: fileStorage}).single('imagen'));
+
 const routasAplicacionResenas = require("./routes/routes1.routes"); //cambiar el nombre de el archivo de rutas a algo mas substancial
 const routasLogin = require('./routes/login.routes');
 
