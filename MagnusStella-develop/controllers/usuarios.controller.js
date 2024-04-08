@@ -18,7 +18,9 @@ exports.post_login = (request, response, next) => {
             if (user) {
                 // Use bcrypt.compare to check if passwords match
                 console.log(user);
-                bcrypt.compare(password, user.contrasena)
+                console.log(password)
+                console.log(user.user.contrasena)
+                bcrypt.compare(password, user.user.contrasena)
                     .then(doMatch => {
                         if (doMatch) {
                             request.session.isLoggedIn = true;
