@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>File Upload Form</h1>
+    <p id="message"></p>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" name="photo" id="photo">
+        <button type="submit">Upload</button>
+    </form>
+    <div id="imageContainer"></div>
+
+    <h2>Preguntas:</h2>
+    <ul>
+        <li>¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?</li>
+        <h4>AJAX permite crear acgualizaciones dinamicas en la pagina sin necesidad de recargarla</h4>
+        <li>¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado
+            del cliente o del lado del servidor?</li>
+            <h4>al utilizar ajax se encunentras mas vulnerabilidades a la seguridad como el XSS y CSRF</h4>
+        <li>¿Qué es JSON?</li>
+        <h4>JSON es un formato de intercambio de datos en JavaScript</h4>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            $('#uploadForm').submit(function (e) {
+                e.preventDefault();
+                var formData = new FormData();
+                formData.append('photo', $('#photo')[0].files[0]);
+
+                $.ajax({
+                    url: '/upload',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        $('#message').text(response.msg);
+                        if (response.file) {
+                            $('#imageContainer').html('<img src="/public/uploads/' + response.file + '" alt="Uploaded File">');
+                        } else {
+                            $('#imageContainer').empty();
+                        }
+                        $('#photo').val(''); // Limpiar el campo de archivo después de la carga
+                    },
+                    error: function (xhr, status, error) {
+                        $('#message').text('Error: ' + error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

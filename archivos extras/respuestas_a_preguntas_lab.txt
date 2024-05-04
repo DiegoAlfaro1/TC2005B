@@ -1,0 +1,7 @@
+Lab 13 y 14
+
+¿Qué beneficios encuentras en el estilo MVC?
+r/ creo que la modularidad del codigo es ventajoso para siempre tener ordenado todos los componentes de la aplicacion
+
+¿Encuentras alguna desventaja en el estilo arquitectónico MVC?
+r/ Al igual que la modularidad puede ser buena para mantener un codigo limpio, aveces se puede confundir ya que hay muchos archivosy todos son necesarios

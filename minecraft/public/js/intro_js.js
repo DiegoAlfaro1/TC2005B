@@ -4,7 +4,7 @@ console.log("hola");
 console.info("Esto es información");
 console.warn("Esta es una advertencia");
 console.error("Esto es un error");
-console.assert(1 == 1);
+console.assert(1==1);
 
 // variables, constantes
 
@@ -27,27 +27,27 @@ console.log("Hola " + nombre);
 const hambre = confirm("¿Tienes hambre?");
 
 if (hambre) {
-  console.log("Es hora de desayunar");
+    console.log("Es hora de desayunar");
 } else {
-  console.log("Sigamos trabajando");
+    console.log("Sigamos trabajando");
 }
 
 // funciones tradicionales
 function construir() {
-  console.log("Construyendo casa");
+    console.log("Construyendo casa");
 }
 
 construir();
 
 // funciones modernas
 const casa = () => {
-  console.log("Construyendo casa anónima");
+    console.log("Construyendo casa anónima");
 };
 
 casa();
 
 const desayuno = (comida) => {
-  console.log("El desayuno de hoy es " + comida);
+    console.log("El desayuno de hoy es " + comida);
 };
 
 desayuno("huevitos");
@@ -69,22 +69,23 @@ console.log(arreglo);
 
 //recorrido tradicional del arreglo
 for (let i = 0; i < arreglo.length; i++) {
-  console.log(arreglo[i]);
+    console.log(arreglo[i]);
 }
 
 //recorridos alternativos del arreglo
-for (let posicion of arreglo) {
-  console.log(posicion);
+for(let posicion of arreglo) {
+    console.log(posicion);
 }
+
 
 //Objetos
 
-const objeto = { atributo: "valor", atributo2: "valor2" };
+const objeto = {atributo: "valor", atributo2: "valor2"}; 
 objeto.atributo3 = 5;
 console.log(objeto);
 
-for (let atributo in objeto) {
-  console.log(atributo);
+for(let atributo in objeto) {
+    console.log(atributo);
 }
 
 // modificar html

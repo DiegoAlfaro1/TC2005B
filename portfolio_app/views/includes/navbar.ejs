@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    /> -->
+    <title>Portfolio Diego Alfaro</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Diego Alfaro</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="https://github.com/DiegoRAP2003">Github</a></li>
+        <li><a href="/aboutMe">About</a></li>
+      </ul>
+      <a href="/hireMe" class="hire-btn btn">Hire Me</a>
+      <% if(username == ''){ %>
+      <a class="btn">Registrarse</a>
+      <a href="/users/login" class="btn">Login</a>
+
+      <%} else{ %>
+        <h2>
+          <%= username %> | 
+        </h2>
+        <a href="/users/logout" class="btn">Salir</a>
+      <% } %>
+    </div>
+    <div class="main">
+  

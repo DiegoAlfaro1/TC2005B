@@ -1,0 +1,16 @@
+<%-include('includes/navbar.ejs', {username: username}) %>
+
+<% for(let info of contacto) { %>
+
+    <ul>
+        <h4>Name: </h4>
+        <li><%=info.name%></li>
+        <h4>Email: </h4>
+        <li><%=info.email%></li>
+    </ul>
+
+    <% } %>
+
+    </div>
+</body>
+</html>

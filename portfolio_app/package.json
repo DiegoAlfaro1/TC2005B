@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Aplicacion de portafolio personal, se utilizara para los labs siguientes",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoRAP2003/TC2005B.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Diego Alfaro Pinto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DiegoRAP2003/TC2005B/issues"
+  },
+  "homepage": "https://github.com/DiegoRAP2003/TC2005B#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0"
+  }
+}
